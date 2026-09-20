@@ -1,0 +1,34 @@
+ARQUIVOS CORRIGIDOS — GALERIA AUTOMÁTICA
+
+1. Substitua o index.html do projeto pelo index.html desta pasta.
+2. Substitua o script.js do projeto pelo script.js desta pasta.
+3. Copie tools/gerar-gallery.ps1 para a pasta tools do projeto.
+
+Sua estrutura deve ficar assim:
+
+projeto/
+├── index.html
+├── style.css
+├── script.js
+├── images/
+│   └── gallery/
+│       ├── suas-fotos...
+│       └── manifest.json
+└── tools/
+    └── gerar-gallery.ps1
+
+SEMPRE QUE ADICIONAR OU REMOVER FOTOS:
+
+Abra o terminal do VS Code na raiz do projeto e execute:
+
+powershell -ExecutionPolicy Bypass -File ".\tools\gerar-gallery.ps1"
+
+Depois atualize o navegador.
+
+IMPORTANTE:
+Abra o site pelo Live Server (http://127.0.0.1:5500/ ou parecido).
+Não abra o index.html usando file:///..., porque o navegador pode bloquear o fetch do manifest.json.
+
+O manifest-atual-backup.json foi incluído apenas como cópia de segurança do manifest que você enviou.
+O arquivo usado pelo site deve continuar em:
+images/gallery/manifest.json
